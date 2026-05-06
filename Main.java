@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    static void main() { // metodo principal (no padrão Java seria public static void main(String[] args))
+    public static void main(String[] args) { // metodo principal (no padrão Java seria public static void main(String[] args))
 
         Scanner sc = new Scanner(System.in); // objeto para ler dados do usuário
 

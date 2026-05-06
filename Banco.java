@@ -10,12 +10,7 @@ public class Banco {
     public void criarConta(String titular, int numero){
 
         // Cria um novo objeto de conta
-        ContaBancaria novaConta = new ContaBancaria();
-
-        // Define os dados da conta
-        novaConta.numero = numero;
-        novaConta.titular = titular;
-        novaConta.saldo = 0; // saldo inicial começa em 0
+        ContaBancaria novaConta = new ContaBancaria(numero, titular, 0);
 
         // Adiciona a nova conta na lista
         contas.add(novaConta);
@@ -31,7 +26,7 @@ public class Banco {
         for (ContaBancaria conta : contas) {
 
             // Verifica se o número da conta é igual ao informado
-            if (conta.numero == numero) {
+            if (conta.getNumero() == numero) {
                 return conta; // retorna a conta encontrada
             }
         }
@@ -50,9 +45,9 @@ public class Banco {
 
             // Percorre todas as contas e mostra os dados
             for (ContaBancaria conta : contas) {
-                System.out.println("Número da conta: " + conta.numero);
-                System.out.println("Titular: " + conta.titular);
-                System.out.println("Saldo: " + conta.saldo);
+                System.out.println("Número da conta: " + conta.getNumero());
+                System.out.println("Titular: " + conta.getTitular());
+                System.out.println("Saldo: " + conta.getSaldo());
                 System.out.println("-------------------------");
             }
         }
