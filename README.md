@@ -1,6 +1,6 @@
 # 💰 Sistema Bancário em Java
 
-Sistema bancário simples desenvolvido em Java, executado via terminal, com foco em prática de Programação Orientada a Objetos (POO) e manipulação de listas.
+Sistema bancário simples desenvolvido em Java, executado via terminal, com foco em prática de Programação Orientada a Objetos (POO), listas e lógica de programação.
 
 ---
 
@@ -9,9 +9,12 @@ Sistema bancário simples desenvolvido em Java, executado via terminal, com foco
 - ✔ Criar conta bancária  
 - ✔ Depositar dinheiro  
 - ✔ Sacar dinheiro  
+- ✔ Transferir valores entre contas  
 - ✔ Consultar saldo  
 - ✔ Listar todas as contas  
+- ✔ Validação de saldo  
 - ✔ Validação de conta existente  
+- ✔ Bloqueio de transferência para mesma conta  
 
 ---
 
@@ -24,6 +27,8 @@ Sistema bancário simples desenvolvido em Java, executado via terminal, com foco
 - Estruturas de repetição (`while`)
 - Estruturas de decisão (`switch`, `if`)
 - Busca de objetos na lista
+- Reutilização de métodos
+- Organização em múltiplas classes
 
 ---
 
@@ -36,8 +41,10 @@ Sistema bancário simples desenvolvido em Java, executado via terminal, com foco
 ---
 
 ## 📂 Estrutura do projeto
+
+```text
 📁 sistema-banco-java
  ├── Main.java            // Menu e interação com o usuário
- ├── Banco.java          // Gerenciamento das contas
- ├── ContaBancaria.java  // Modelo da conta e regras de negócio
+ ├── Banco.java           // Gerenciamento das contas e transferências
+ ├── ContaBancaria.java   // Modelo da conta e regras de negócio
  └── README.md
