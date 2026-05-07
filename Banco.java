@@ -35,6 +35,33 @@ public class Banco {
         return null;
     }
 
+    public void transferir(int origem, int destino, double valor){
+        ContaBancaria contaOrigem = buscarConta(origem);
+        ContaBancaria contaDestino = buscarConta(destino);
+
+        if (valor <= 0){
+            System.out.println("Valor invalido!");
+            return;
+        }
+
+        if (origem == destino) {
+            System.out.println("Não é possível transferir para a mesma conta");
+            return;
+        }
+
+        if (contaOrigem == null || contaDestino == null){
+            System.out.println("Conta inexistente!");
+        }
+        else if (contaOrigem.getSaldo() >= valor){
+            contaOrigem.sacar(valor);
+            contaDestino.depositar(valor);
+            System.out.println("Transferencia realizada com sucesso!");
+        }
+        else {
+            System.out.println("Saldo insuficiente!");
+        }
+    }
+
     // Metodo para mostrar todas as contas cadastradas
     public void mostrarContas() {
 

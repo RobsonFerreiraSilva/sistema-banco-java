@@ -10,14 +10,15 @@ public class Main {
         int opcao = 0; // variável para controlar o menu
 
         // loop do menu, roda até o usuário escolher sair (6)
-        while (opcao != 6) {
+        while (opcao != 7) {
             System.out.println("-------- Menu --------");
             System.out.println("1 - Criar conta: ");
             System.out.println("2 - Deposito: ");
             System.out.println("3 - Sacar: ");
             System.out.println("4 - Consultar Saldo: ");
             System.out.println("5 - Mostrar Contas: ");
-            System.out.println("6 - Sair: ");
+            System.out.println("6 - Transferência: ");
+            System.out.println("7 - Sair: ");
 
             opcao = sc.nextInt(); // lê a opção
             sc.nextLine(); // limpa o ENTER
@@ -96,6 +97,24 @@ public class Main {
                     break;
 
                 case 6:
+                    System.out.println("Transferência:" );
+                    System.out.println("Digite o número da conta: ");
+                    int numeroConta = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Digite o Número da conta destino");
+                    int numContaDestino = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.println("Digite o valor a ser transferido: ");
+                    double valorTransferido = sc.nextDouble();
+                    sc.nextLine();
+
+                    banco.transferir(numeroConta, numContaDestino, valorTransferido);
+                    break;
+
+
+                case 7:
                     // saída do sistema
                     System.out.println("Saindo da sua conta, Obrigado");
                     break;
